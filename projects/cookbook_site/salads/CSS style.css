@@ -1,0 +1,45 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+	background-image: url('bg.jpg');}
+h1, h2 {
+	color: #FFFF33;
+	font-size: 300%;
+	font-family:"Monotype Corsiva", Comic Sans MS, cursive;}
+p {
+	background-color: rgb(153,245,204);
+	color: rgb(102,0,102);}
+a {
+	font-size: 150%}
+.stepB {
+	float: right;}
+table {
+	width: 500px;}
+tr.odd {
+	background-color: #FFFFFF;}
+tr.even {
+	background-color: #efefef;}
+img {
+	border:2px solid #021a40;
+	display: block;
+	margin: 0px auto;
+	width: 600px;
+	height: 400px;}
+/* unvisited link */
+a:link {
+color: #00FFFF;
+}
+
+/* visited link */
+a:visited {
+color: #FFFFFF;
+}
+
+/* mouse over link */
+a:hover {
+color: #FFBF00;
+}
+
+/* selected link */
+a:active {
+color: #0000FF;
+}

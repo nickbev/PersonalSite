@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Markups</title>
+	</head>	
+	<body>
+		<h1>Markups</h1>
+		<h2>Doctypes</h2>
+			<p>Doctypes are used to determine which version of HTML is used
+			   by a page. This helps with other versions of computers. Also,
+			   CSS uses this to help render a page correctly.
+		<h2>Comments in HTML</h2>
+			<!-- This cannot be seen on the webpage -->
+			<p>Code that is in between carrots and a pair of dashes with an
+			   exclamation mark in front cannot be seen on the page itself.
+			<!-- However, it can be seen if looking at the source code 
+			
+			     behind the webpage.--></p>
+		<h2>Class attribute</h2>
+			<p class="important"> All elements can have a class, IMPORTANT</p>
+			<p>This one has no class attribute. They look the same, but 				    with CSS you can change the color or font.</p>
+		<h2>Block element</h2>
+			<p>Elements such as headings, paragraphs, and lists always
+			   start on a new line.</p>
+		<h2>Inline element</h2>
+			<p>Some elements such as em (<em>Example</em>) and b 					   (<b>Example</b>) continue on the same line.</p>
+		<h2>Text and Elements in a Block</h2>
+			<p>The div element allows you to put a set of elements together
+			   in a one block-level box.</p>
+			<div id="header">
+				<img src="images/twain.jpg" alt="Mark Twain" />
+				<ul>
+					<li><a href="http://www.cmgww.com/historic/twain/"
+					  >Main Website</a></li>
+					<li><a href="http://en.wikipedia.org/wiki/						      Mark_Twain">Wikipedia</a></li>
+				</ul>
+			</div>
+		<h2>Text and Elements Inline</h2>
+			<p>Instead of using div, when inline you want to use span. This is 			   usually used for <span class="gallery">editing</span>
+			   this text using CSS.</p>
+			</p>
+		<h2>Iframes</h2>
+			<p>Like a little window pasted onto your webpage, frames can be
+			   taken form other pages and seen on yours, for example
+			   Google Maps. You can also set its width and height.
+			   You can also set whether you can scroll on the site or
+			   have a border with scrolling and frameborder attributes.</p>
+			<iframe
+				src="http://ehs.edgemont.org/www/edgemont_ehs/site/hosting/pd/index.html"
+				width="450"
+				height="350"
+				frameborder="1"
+				scrolling="yes">
+			</iframe>
+		<h2>Page Information</h2>
+			<p>Using the meta element allows information about the webpage.
+		           Although not visible to the user, it tells engines about the
+			   page and usually has name and content attributes. Some 				   usable variables include description, keywords, robots, author,
+			   pragma, and expires.</p>
+			<meta name="description"
+				content="My program" />
+			<meta name="keywords"
+				content="html, frames, info" />
+			<meta name="robots"
+				content="nofollow" /> <!-- search engines should not add 					                    this page -->
+			<meta http-equiv="author"
+				content="Nick Bevacqua" />
+			<meta http-equiv="pragma"
+				content="no-cache" /> <!-- prevents caching -->
+			<meta http-equiv="expires"
+				content="Fri 06 Jun 2014 23:59:59 EDT" />
+		<h2>Escape characters</h2>
+			<p>Many characters that typically cannot appear on a webpage
+			   have particular series of symbols and letters to have it
+			   appear. Examples: &lt; &copy; &trade;</p>
+	</body>
+</html>

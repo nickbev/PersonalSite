@@ -1,0 +1,172 @@
+<html>
+	<head>
+		<title>Forms</title>
+	</head>
+	<body>
+		<h1>Forms</h1>
+			<p>Forms involve user input, whether they involve adding text, making choices, submitting or uploading files/forms.</p>
+			<p>Each form will use the input element, but different variables for the type attribute will make the difference.</p>
+		<h2>Steps for a Form</h2>
+			<ol>
+				<li>The user fills and submits a form to the server.</li>
+				<li>Using several languages, the information is processed by the server and stored in a database.</li>
+				<li>The server creates a new page and is sent back to the user.</li>
+			</ol>
+		<h2>Basics for a Form</h2>
+			<p>The form controls live in its element, which contains an action, method and id attribute.</p>
+			<p>The action attribute has the address which receives the information.</p>
+			<p>The method attribute either has get or post as the variable. When using get, the values of the form are added at the end of the URL (ideal for short forms or receiving data from a 				   server). The post method has the values sent in HTTP headers (used if the form allows file upload, is long, has private information or added or deletes information from a database.</p>
+			<form action="http://www.example.com/subscribe.php" method="get">
+				<p>This is where the form controls are.</p></form>
+		<h3>Text Input</h3>
+			<p>Using the input element with attributes type, name, size and 
+			   maxlength, you can make a one-lined text box to input.</p>
+			<form action="http://www.example.com/login.php">
+				<p>Username:
+					<input type="text" name="username" size="15" maxlength="30" />
+				</p>
+			</form>
+		<h4>Passwords (Hidden Text)</h4>
+			<p>Although not a very secure way to create passwords entries, you can make a password by setting the type attribute to password instead of text. </p>
+			<form action=“”>
+				<p>Username:
+					<input type="text" name="username" size="15" maxlength="30" />
+				</p>
+				<p>Password:
+					<input type="password" name="password" size="15" maxlength="30" />
+				</p>
+			</form>
+		<h4>Text Area</h4>
+			<p>Using textarea allows a multiline insert box that can have 
+			   text inside to type off of.</p>
+			<p>What do you think of my program?</p>
+			<textarea name=“comments”>Insert comments here..</textarea>
+		<h3>Radio Button</h3>
+			<p>When the type attribute is set to radio, you can use the same name attribute for all options for the given prompt, but separate values.</p>
+			<form action="">
+				<p>What do you think of my program? <br />
+				<input type="radio" name="rating" value="bad" />Bad
+				<input type="radio" name="rating" value="Good" />Good
+				</p>
+			</form>
+		<h4>Checkbox</h4>
+			<p>When the type attribute is set to checkbox, the behavior is the same as radio button except multiple can be chosen.</p>
+			<form action="">
+				<p>What do you enjoy?<br />
+				<input type="checkbox" name="happy" value="candy" />Candy
+				<input type="checkbox" name="happy" value="spa" >Spas
+				<input type="checkbox" name="happy" value="sleep" >Sleep
+				</p>
+			</form>
+		<h3>Drop Down List</h2>
+			<p>You can use the select element followed by option elements
+			   (each with values) to provide an drop-down menu.</p>
+			<form action="">
+				<p>Which sport do you prefer?</p>
+				<select name="devices">
+					<option value="football">Football</option>
+					<option value="soccer">Soccer</option>
+					<option value="basketball">Basketball</option>
+					<option value="hockey">Hockey</option>
+					<option value="baseball">Baseball</option>
+				</select>
+			</form>
+		<h4>Multiple Select Box</h4>
+			<p>By including the size and multiple attributes, you can 
+			   allow multiple options chosen at once.</p>
+			<form action="">
+				<p>Which sport do you prefer? (Must hold down control on
+				   PC or command on Mac)</p>
+				<select name="devices" size="3" multiple="multiple">
+					<option value="football">Football</option>
+					<option value="soccer">Soccer</option>
+					<option value="basketball">Basketball</option>
+					<option value="hockey">Hockey</option>
+					<option value="baseball">Baseball</option>
+				</select>
+			</form>
+		<h3>File Input Box and Submit Button</h3>
+			<p>In this case, you set the type attribute to file to upload and submit for the button to send the file.</p>
+			<form action="">
+				<p>Upload your File Here:</p>
+				<input type="file" name="user-song" /><br />
+				<input type="submit" value="Upload" />
+			</form>
+		<h4>Image Button</h4>
+			<p>When using a customized image as a button, set the type to image
+			   and include the image attributes (src, height, width).</p>
+			<form action="">
+				<p>Subscribe to our email list:</p>
+				<input type="text" name="email" /><br />
+				<input type="image" src="images/subscribe.jpg" width="100" height="35" />
+			</form>
+		<h3>Button and Hidden Controls</h3>
+			<p>The button element allows a combination of both text and 
+			   images, and hidden controls are meant for developers who
+			   use information the user does not need.</p>
+			<form action="">
+				<button><img src="images/plus.png" alt="add" 
+				width="10" height="10" />Add</button>
+				<input type="hidden" name="bookmark" value="lyrics" />
+			</form>
+		<h3>Labeling Form Controls</h3>
+			<p>Each form should have a label element to make the form
+			   accessible to vision-impaired users. The for attribute stands for which form control the label belongs to.</p>
+			<label>Age: <input type="text" name="age" /></label><br/ >
+			Gender:<input id="female" type="radio" name="gender" value="f">
+			<label for="female">Female</label>
+			<input id="male" type="radio" name="gender" value="m">
+			<label for="male">Male</label>
+		<h4>Grouping Form Elements</h4>
+			<p>You can group related form fields with the fieldset element
+			   and usually have a line around it. The legend element can be
+			   to caption the group of form fields.</p>
+			<fieldset>
+				<legend>Contact Information</legend>
+				<label>Email:<br />
+				<input type="text" name="email" /></label><br />
+				<label>Mobile number:<br />
+				<input type="text" name="mobile" /></label><br />
+				<label>Telephone number:<br />
+				<input type="text" name="telephone" /></label>
+			</fieldset>	
+		<h4>Form Validation</h4>
+			<p>When you want to put a message about incorrect or unfilled
+			   areas, you can use a required attribute.</p>
+			<form action="">
+				<label for="username">Username</label>
+				<input type="text" name="username" required="required" /><br />
+				<label for="password">Password</label>
+				<input type="text" name="password" required="required" /><br />
+				<input type="submit" value="Submit" />
+			</form>
+		<h3>Date Input</h3>
+			<p>Setting the type attribute to date allows date input.</p>
+			<form action="">
+				<label for="depart">Departure Date</label>
+				<input type="date" name="depart" />	
+				<input type="submit" value="Submit" />
+			</form>
+		<h4>Email and URL Input</h4>
+			<p>Setting the type attribute to email or URL requirers that particular information automatically.</p>
+			<form action="">
+				<p>Please enter your email address:</p>
+				<input type="email" name="email" />	
+				<input type="submit" value="Submit" />
+			</form>
+			<form action="">
+				<p>Please enter your website address:</p>
+				<input type="url" name="website" />	
+				<input type="submit" value="Submit" />
+			</form>
+		<h4>Search Input</h4>
+			<form action="">
+				<p>Setting the type attribute to search allows the search
+				   bar to appear, and you can set the message inside
+				   using the placeholder attribute.</p>
+				<p>Search:</p>
+				<input type="search" name="search" placeholder="Enter keyword" />	
+				<input type="submit" value="Search" />
+			</form>
+	</body>
+</html>

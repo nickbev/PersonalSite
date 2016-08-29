@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Tables</title>
+	</head>
+	<body>
+		<h1>Tables</h1>
+		<h2>Structure</h2>
+			<p>Within a table, you can use tr to represent each row and 				   inside, a td will represent your data in a row.</p>
+			<table>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+			</table>
+		<h2>Headings</h2>
+			<p>If you use th instead of td, you can indicate a heading of a 			   column or row, and with the scope attribute, you can specify 			   with the row or column value.</p>
+			<table>
+				<tr>
+					<th></th>
+					<th scope=“col”>Column 1</th>
+					<th scope=“col”>Column 2</th>
+				</tr>
+				<tr>
+					<th scope=“row”>Row 1</th>
+					<td>A</td>
+					<td>B</td>
+				</tr>
+				<tr>
+					<th scope=“row”>Row 2</th>
+					<td>C</td>
+					<td>D</td>
+				</tr>
+			</table>
+		<h2>Spanned Columns and Rows</h2>
+			<p>By using td with the attribute rowspan or colspan with a 				   value, you can make a value span for a number of spaces 				   horizontally or vertically.</p>
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">Column 1</th>
+					<th scope="col">Column 2</th>
+					<th scope="col">Column 3</th>
+				</tr>
+				<tr>
+					<th scope="row">Row 1</th>
+					<td colspan="2">A</td>
+					<td rowspan="2">B</td>
+				</tr>
+				<tr>
+					<th scope="row">Row 2</th>
+					<td colspan = "2">C</td>
+					<td>Shifted Spot</td>
+				</tr>
+			</table>
+		<h2>Organization for Longer Tables</h2>
+			<p>With a thead, tbody, and tfoot, you can create an organized 				   table with a result.</p>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Day</th>
+						<th scope="col">Column 1</th>
+						<th scope="col">Column 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+							<td>12</td>
+						<td>8</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th scope="row">Total</th>
+						<td>13</td>
+						<td>13</td>
+					</tr>
+				</tfoot>
+			</table>
+	<body>
+</html>

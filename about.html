@@ -1,0 +1,74 @@
+<!-- Website and code created by Nick Bevacqua. -->
+
+<DOCTYPE! html>
+<html>
+	<head>
+		<script src="/jquery-1.11.3.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+			
+				$(".icon-menu").click(function() {
+ 					$(".menu").animate({ left: "0" }, 200, function(){});
+				});
+				
+				$(".icon-close").click(function() {
+ 					$(".menu").animate({ left: "-320" }, 200, function(){});
+				});
+			});
+		</script>
+		
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+  		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<title>Nicholas J. Bevacqua</title>
+		<link href="/CSS_Styles/style1.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="menu">
+    			<!-- Menu icon -->
+    			
+    			<div class="icon-close">
+      				<img src="/images/x.png">
+      			</div>
+      			
+      			<!-- Picture of Myself and Words -->
+      			
+      			<div class="selfpic">
+      				<img src="/images/selfpicmenu.png">
+      			</div>
+      			
+      			<p>Nick Bevacqua</p>
+      			
+      			<!-- Icons for Social Media -->
+      			
+      			<div class="iconlist">
+     				<a href="https://www.facebook.com/nick.bevacqua.77" target="_blank"><img hspace="5" src="/images/facebook.png"></img></a>
+     				<a href="https://github.com/nickbevacqua" target="_blank"><img hspace="5" src="/images/github.png"></img></a>
+     				<a href="https://linkedin.com/pub/nicholas-bevacqua/a5/417/54" target="_blank"><img hspace="5" src="/images/linkedin.png"></img></a>
+     				<a href="https://twitter.com/nickbevacqua" target="_blank"><img hspace="5" src="/images/twitter.png"></img></a>
+     				<a href="mailto:nickbev@umich.edu"><img id="email" hspace="5" src="/images/email.png"></img></a>
+     			</div>
+			<br>
+			
+     			<!-- Menu -->
+     			
+     			<div class="pages">
+   				<ul>
+        				<li><a href="index.html">Home</a></li>
+      					<li><a href="about.html">About Nick</a></li>
+      					<li><a href="resume.html">Resume</a></li>
+      					<li><a href="projects/">Projects</a></li>
+     				</ul>
+     			</div>
+  		</div>
+  		<div class="icon-menu"> <i class="fa fa-bars"></i> Menu </div>
+  		<h1><center>Nicholas J. Bevacqua</center></h1>
+  		<h3><center>About Me</center></h3>
+  		<div class="onPage">
+  		<p class="para">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am currently a sophomore studying Computer Science in the School of Literature, Science and Art at the University of Michigan in Ann Arbor. My fields on interest within Computer Science include Security, Game Development, Data Analysis and Software Engineering. I have been coding since 2010 and have learned a variety of programming languages. My most practiced programming languages are C++ and Java. I know much about algorithm efficiencies and various data structures as well as programming techniques such as version control, debugging and rewriting to improve efficieny.</p><br>
+  		<p class="para">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am seeking an internship for the summer of 2016 in order to learn more about my specifc fields of interest and better understand how I can apply programming skills in the real world. I have created various projects which I have uploaded to GitHub and are viewable from the menu, but I am always going back to improve upon my work. I also designed this website entirely on my own based on my own research. Feel free to reach out to me at nickbev@umich.edu if you have any questions or possible internship opportunities. Thank you for visiting my site and reading about me!</p>
+  		
+  		</div>
+	</body>
+</html>
