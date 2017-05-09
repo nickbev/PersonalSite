@@ -1,0 +1,71 @@
+<!-- Website and code created by Nick Bevacqua. -->
+
+<DOCTYPE! html>
+<html>
+	<head>
+		<script src="/jquery-1.11.3.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+  		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<title>Nicholas J. Bevacqua</title>
+		<link href="/CSS_Styles/styleMakey.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+  		<h1><center>Makey Makey Calculator</center></h1>
+  		<table id="money"
+  			<tr>
+  				<td><img src="/images/penny.png" alt="Penny" style="width:80px;height:80px;display: table;vertical-align:middle"></td>
+  				<td><p id="pennies" style="display: inline;"> x 0 = $0.00</p></br></td>
+  			</tr><tr>
+  				<td><img src="/images/nickel.png" alt="Nickel" style="width:80px;height:80px;display: table;vertical-align:middle"></td>
+  				<td><p id="nickels"> x 0 = $0.00</p></td>
+  			</tr><tr>
+  				<td><img src="/images/dime.png" alt="Dime" style="width:80px;height:80px;display: inline-block;vertical-align:middle"></td>
+  				<td><p id="dimes"> x 0 = $0.00</p></td>
+  			</tr><tr>
+  				<td><img src="/images/quarter.png" alt="Quarter" style="width:80px;height:80px;display: inline-block;vertical-align:middle">
+  				<td><p id="quarters"> x 0 = $0.00</p></td>
+  			</tr><tr>
+  				<td><p id="total" style="font-size:150%;">Total = $0.00</p></td>
+  			</tr>
+  		</table>
+  		<script>
+  			var numPennies = 0;
+  			var numNickels = 0;
+  			var numDimes = 0;
+  			var numQuarters = 0;
+  			var valTotal = 0;
+  			
+  			document.addEventListener("keydown", function(event) {
+  			 	if(event.which == 37)
+  			 	{
+  			 	          numPennies += 1;
+  			 	          $("#pennies").text("x " + numPennies + " = $" + (numPennies * 0.01).toFixed(2));
+  			 	          valTotal += 0.01;
+  			 	          $("#total").text("Total = $" + valTotal.toFixed(2));
+  			 	}
+  			 	else if(event.which == 38)
+  			 	{
+  			 	          numNickels += 1;
+  			 	          $("#nickels").text("x " + numNickels + " = $" + (numNickels * 0.05).toFixed(2));
+  			 	          valTotal += 0.05;
+  			 	          $("#total").text("Total = $" + valTotal.toFixed(2));
+  			 	}
+  			 	else if(event.which == 39)
+  			 	{
+  			 	          numDimes += 1;
+  			 	          $("#dimes").text("x " + numDimes + " = $" + (numDimes * 0.10).toFixed(2));
+  			 	          valTotal += 0.10;
+  			 	          $("#total").text("Total = $" + valTotal.toFixed(2));
+  			 	}
+  			 	else if(event.which == 40)
+  			 	{
+  			 	          numQuarters += 1;
+  			 	          $("#quarters").text("x " + numQuarters + " = $" + (numQuarters * 0.25).toFixed(2));
+  			 	          valTotal += 0.25;
+  			 	          $("#total").text("Total = $" + valTotal.toFixed(2));
+  			 	}
+  			});
+  		</script>
+	</body>
+</html>
